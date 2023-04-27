@@ -1,8 +1,20 @@
 package User;
 import java.util.*;
 public class login {
+    Scanner entry = new Scanner(System.in);
+    private String nickname;
+    private String password;
 
-    Scanner scanner = new Scanner(System.in);
-    protected String nickname = scanner.nextLine();
-    protected String password = scanner.nextLine();
+    public void enterData(){
+        nickname = entry.nextLine();
+        password = entry.nextLine();
+    }
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }

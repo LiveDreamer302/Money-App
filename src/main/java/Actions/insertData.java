@@ -21,8 +21,12 @@ public class insertData {
             int rowsAffected = preparedStatement.executeUpdate();
 
         } catch (ClassNotFoundException | SQLException ex){
-            System.out.println("Sorry. Something went wrong");
-            ex.printStackTrace();
+            if (ex instanceof SQLIntegrityConstraintViolationException) {
+                System.out.println("User already exists!");
+            } else {
+                System.out.println("Sorry. Something went wrong");
+                ex.printStackTrace();
+            }
         }
 
 
