@@ -1,5 +1,4 @@
 package org.example;
-import Actions.*;
 import User.*;
 
 public class Main {
@@ -15,7 +14,13 @@ public class Main {
         login.enterData();
         String nickname = login.getNickname();
         String password = login.getPassword();
-        check.checkData(nickname, password);
+//        check.checkData(nickname, password);
+        if (check.checkData(nickname, password)){
+            System.out.println("Welcome back " + nickname +"!");
+        } else {
+            System.out.println("Gerara here men. Shit!. Im insane");
+        }
+
 
     }
 }
