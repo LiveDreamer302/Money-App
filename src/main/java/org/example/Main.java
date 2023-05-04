@@ -1,14 +1,21 @@
 package org.example;
 
-import Actions.*;
-import User.*;
+import User.checkUser;
+import User.login;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.time.LocalDate;
-import java.util.List;
-
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        TransactionManager manager = new TransactionManager();
+
+        SpringApplication.run(Main.class, args);
+
+
+/*
+        signUp signUp = new signUp();
+        String nickname = signUp.setNickname();
+        String password = signUp.setPassword();
 
         checkUser check = new checkUser();
         login login = new login();
@@ -16,12 +23,13 @@ public class Main {
         String nickname = login.getNickname();
         String password = login.getPassword();
         check.checkData(nickname, password);
+*/
 
 
 
 
-
-
+/*
+        TransactionManager manager = new TransactionManager();
 
         // Add some transactions
         manager.addTransaction(new Expense(10.0, LocalDate.of(2023, 4, 25), "Food", "Lunch", "Credit Card", "Restaurant"));
@@ -41,8 +49,8 @@ public class Main {
         }
         System.out.println("Total expenses for April 2023: " + totalExpenses);
         System.out.println("Total income for April 2023: " + totalIncome);
+*/
     }
-
 
 
 }

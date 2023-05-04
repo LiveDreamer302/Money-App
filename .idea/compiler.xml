@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="Money-App" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Money-App" target="20" />
+      <module name="demo" target="20" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Money-App" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>

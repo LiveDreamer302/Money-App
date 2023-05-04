@@ -1,9 +1,17 @@
 package Actions;
 
 import java.time.LocalDate;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "transactions")
 
 public class Expense extends Transaction {
+    @Column(name = "paymentMethod")
+
     private String paymentMethod;
+    @Column(name = "payee")
+
     private String payee;
 
     public Expense(double amount, LocalDate date, String category, String description, String paymentMethod, String payee) {
