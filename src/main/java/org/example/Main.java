@@ -1,6 +1,9 @@
 package org.example;
 import User.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args){
 
@@ -21,6 +24,6 @@ public class Main {
             System.out.println("Gerara here men. Shit!. Im insane");
         }
 
-
+        SpringApplication.run(Main.class, args);
     }
 }
